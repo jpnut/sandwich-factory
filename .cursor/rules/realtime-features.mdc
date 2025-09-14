@@ -1,0 +1,116 @@
+---
+alwaysApply: false
+---
+
+# Real-time Features
+
+## Live Updates
+- Show order status changes in real-time
+- Display workstation availability
+- Update ingredient inventory levels
+- Show worker activity status
+
+## Dashboard Components
+- Order queue visualization
+- Workstation status board
+- Inventory levels display
+- Performance metrics
+
+## Implementation Guidelines
+- Use Laravel Reverb for WebSocket connections
+- Implement proper event broadcasting
+- Handle connection failures gracefully
+- Provide fallback for non-real-time scenarios
+- Optimize for performance with large datasets
+
+## User Experience
+- Provide immediate feedback for user actions
+- Show loading states during data updates
+- Implement proper error handling for real-time features
+- Use animations to highlight status changes
+
+## Comparison Monitoring
+
+### Traditional Laravel Monitoring
+- Display Laravel queue job status and progress
+- Show job retry attempts and failures
+- Monitor queue processing times
+- Display manual intervention requirements
+- Track job chaining dependencies
+
+### Temporal Monitoring
+- Show Temporal workflow execution status
+- Display activity progress and retries
+- Monitor workflow execution times
+- Show automatic compensation actions
+- Track workflow state transitions
+
+### Side-by-Side Comparison
+- Create parallel monitoring dashboards
+- Show real-time status of both implementations
+- Highlight differences in failure handling
+- Display complexity metrics for each approach
+- Provide toggle to switch between views
+
+### Metrics to Display
+- Processing time comparison
+- Failure rate and recovery time
+- Code complexity metrics
+- Resource utilization
+- Debugging and troubleshooting ease
+# Real-time Features
+
+## Live Updates
+- Show order status changes in real-time
+- Display workstation availability
+- Update ingredient inventory levels
+- Show worker activity status
+
+## Dashboard Components
+- Order queue visualization
+- Workstation status board
+- Inventory levels display
+- Performance metrics
+
+## Implementation Guidelines
+- Use Laravel Reverb for WebSocket connections
+- Implement proper event broadcasting
+- Handle connection failures gracefully
+- Provide fallback for non-real-time scenarios
+- Optimize for performance with large datasets
+
+## User Experience
+- Provide immediate feedback for user actions
+- Show loading states during data updates
+- Implement proper error handling for real-time features
+- Use animations to highlight status changes
+
+## Comparison Monitoring
+
+### Traditional Laravel Monitoring
+- Display Laravel queue job status and progress
+- Show job retry attempts and failures
+- Monitor queue processing times
+- Display manual intervention requirements
+- Track job chaining dependencies
+
+### Temporal Monitoring
+- Show Temporal workflow execution status
+- Display activity progress and retries
+- Monitor workflow execution times
+- Show automatic compensation actions
+- Track workflow state transitions
+
+### Side-by-Side Comparison
+- Create parallel monitoring dashboards
+- Show real-time status of both implementations
+- Highlight differences in failure handling
+- Display complexity metrics for each approach
+- Provide toggle to switch between views
+
+### Metrics to Display
+- Processing time comparison
+- Failure rate and recovery time
+- Code complexity metrics
+- Resource utilization
+- Debugging and troubleshooting ease

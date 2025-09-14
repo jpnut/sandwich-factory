@@ -1,0 +1,32 @@
+---
+alwaysApply: true
+---
+
+# Sandwich Factory Demo Application
+
+## Project Overview
+This is a demo application showcasing the advantages of using Temporal.io for managing distributed transactions in a sandwich factory workflow. The app demonstrates real-time order processing with multiple steps that can fail and be recovered.
+
+## Tech Stack
+- **Backend**: Laravel 12, PHP 8.2+
+- **Frontend**: Vue 3, TypeScript, Inertia.js
+- **Styling**: Tailwind CSS 4, shadcn-vue components
+- **Real-time**: Laravel Reverb, Pusher
+- **Build**: Vite, ESLint, Prettier
+
+## Purpose
+This application serves as a demonstration of how Temporal.io can handle complex distributed workflows with failure scenarios and recovery mechanisms in a real-world context.
+# Sandwich Factory Demo Application
+
+## Project Overview
+This is a demo application showcasing the advantages of using Temporal.io for managing distributed transactions in a sandwich factory workflow. The app demonstrates real-time order processing with multiple steps that can fail and be recovered.
+
+## Tech Stack
+- **Backend**: Laravel 12, PHP 8.2+
+- **Frontend**: Vue 3, TypeScript, Inertia.js
+- **Styling**: Tailwind CSS 4, shadcn-vue components
+- **Real-time**: Laravel Reverb, Pusher
+- **Build**: Vite, ESLint, Prettier
+
+## Purpose
+This application serves as a demonstration of how Temporal.io can handle complex distributed workflows with failure scenarios and recovery mechanisms in a real-world context.

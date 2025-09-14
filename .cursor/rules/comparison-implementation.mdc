@@ -1,0 +1,258 @@
+---
+alwaysApply: false
+---
+
+# Comparison Implementation Guidelines
+
+## Purpose
+Demonstrate the advantages of Temporal.io over traditional Laravel queued jobs by implementing the same sandwich factory workflow using both approaches.
+
+## Implementation Strategy
+
+### Traditional Laravel Approach
+Create a complete workflow using Laravel's queued job system:
+
+#### Job Structure
+```
+app/Jobs/Traditional/
+├── OrderProcessingJob.php          # Main orchestrator job
+├── IngredientPreparationJob.php    # Step 1: Prepare ingredients
+├── BreadToastingJob.php           # Step 2: Toast bread
+├── SandwichAssemblyJob.php        # Step 3: Assemble sandwich
+├── PackagingJob.php               # Step 4: Package sandwich
+├── QualityCheckJob.php            # Step 5: Quality check
+└── DeliveryJob.php                # Step 6: Deliver order
+```
+
+#### Key Characteristics
+- Use job chaining for sequential execution
+- Manual state tracking in database
+- Manual retry logic with exponential backoff
+- Manual error handling and rollback
+- Limited observability and debugging
+
+### Temporal Approach
+Create the same workflow using Temporal:
+
+#### Structure
+```
+app/Workflows/
+└── SandwichOrderWorkflow.php      # Main workflow orchestrator
+
+app/Activities/
+├── PrepareIngredientsActivity.php # Step 1: Prepare ingredients
+├── ToastBreadActivity.php        # Step 2: Toast bread
+├── AssembleSandwichActivity.php  # Step 3: Assemble sandwich
+├── PackageSandwichActivity.php   # Step 4: Package sandwich
+├── QualityCheckActivity.php      # Step 5: Quality check
+└── DeliverOrderActivity.php      # Step 6: Deliver order
+```
+
+#### Key Characteristics
+- Automatic state management
+- Built-in retry and compensation
+- Automatic error handling
+- Rich observability and debugging
+- Durable execution
+
+## Comparison Points
+
+### 1. State Management
+**Traditional**: Manual database state tracking with status updates
+**Temporal**: Automatic workflow state management
+
+### 2. Error Handling
+**Traditional**: Manual job retries and rollback logic
+**Temporal**: Built-in retry mechanisms and automatic compensation
+
+### 3. Observability
+**Traditional**: Limited to Laravel queue monitoring
+**Temporal**: Rich Temporal Web UI with workflow replay
+
+### 4. Long-running Processes
+**Traditional**: Job timeout limitations
+**Temporal**: No timeout limitations, durable execution
+
+### 5. Debugging
+**Traditional**: Manual debugging with logs
+**Temporal**: Workflow replay and step-by-step debugging
+
+### 6. Code Complexity
+**Traditional**: More boilerplate for state management and error handling
+**Temporal**: Less boilerplate, focus on business logic
+
+## Demo Scenarios
+
+### Failure Scenarios to Implement
+1. **Ingredient Shortage**: Simulate ingredient unavailability
+2. **Equipment Failure**: Simulate toaster malfunction
+3. **Worker Unavailable**: Simulate worker absence
+4. **Quality Check Failure**: Simulate failed quality inspection
+5. **Network Interruption**: Simulate connectivity issues
+
+### Success Metrics
+- Time to implement each approach
+- Lines of code comparison
+- Debugging time for failures
+- Recovery time from failures
+- Monitoring capabilities
+
+## UI Components
+
+### Comparison Dashboard
+- Side-by-side workflow visualization
+- Real-time status updates
+- Performance metrics comparison
+- Failure scenario controls
+
+### Monitoring Views
+- Traditional Laravel queue monitoring
+- Temporal Web UI integration
+- Custom comparison metrics
+
+## Implementation Guidelines
+
+### Shared Components
+- Use the same models and services
+- Implement identical business logic
+- Use consistent validation rules
+- Share database schema
+
+### Testing Strategy
+- Create identical test scenarios
+- Measure implementation complexity
+- Document debugging experiences
+- Compare recovery mechanisms
+
+### Documentation
+- Document implementation differences
+- Highlight Temporal advantages
+- Provide code complexity metrics
+- Include troubleshooting guides
+# Comparison Implementation Guidelines
+
+## Purpose
+Demonstrate the advantages of Temporal.io over traditional Laravel queued jobs by implementing the same sandwich factory workflow using both approaches.
+
+## Implementation Strategy
+
+### Traditional Laravel Approach
+Create a complete workflow using Laravel's queued job system:
+
+#### Job Structure
+```
+app/Jobs/Traditional/
+├── OrderProcessingJob.php          # Main orchestrator job
+├── IngredientPreparationJob.php    # Step 1: Prepare ingredients
+├── BreadToastingJob.php           # Step 2: Toast bread
+├── SandwichAssemblyJob.php        # Step 3: Assemble sandwich
+├── PackagingJob.php               # Step 4: Package sandwich
+├── QualityCheckJob.php            # Step 5: Quality check
+└── DeliveryJob.php                # Step 6: Deliver order
+```
+
+#### Key Characteristics
+- Use job chaining for sequential execution
+- Manual state tracking in database
+- Manual retry logic with exponential backoff
+- Manual error handling and rollback
+- Limited observability and debugging
+
+### Temporal Approach
+Create the same workflow using Temporal:
+
+#### Structure
+```
+app/Workflows/
+└── SandwichOrderWorkflow.php      # Main workflow orchestrator
+
+app/Activities/
+├── PrepareIngredientsActivity.php # Step 1: Prepare ingredients
+├── ToastBreadActivity.php        # Step 2: Toast bread
+├── AssembleSandwichActivity.php  # Step 3: Assemble sandwich
+├── PackageSandwichActivity.php   # Step 4: Package sandwich
+├── QualityCheckActivity.php      # Step 5: Quality check
+└── DeliverOrderActivity.php      # Step 6: Deliver order
+```
+
+#### Key Characteristics
+- Automatic state management
+- Built-in retry and compensation
+- Automatic error handling
+- Rich observability and debugging
+- Durable execution
+
+## Comparison Points
+
+### 1. State Management
+**Traditional**: Manual database state tracking with status updates
+**Temporal**: Automatic workflow state management
+
+### 2. Error Handling
+**Traditional**: Manual job retries and rollback logic
+**Temporal**: Built-in retry mechanisms and automatic compensation
+
+### 3. Observability
+**Traditional**: Limited to Laravel queue monitoring
+**Temporal**: Rich Temporal Web UI with workflow replay
+
+### 4. Long-running Processes
+**Traditional**: Job timeout limitations
+**Temporal**: No timeout limitations, durable execution
+
+### 5. Debugging
+**Traditional**: Manual debugging with logs
+**Temporal**: Workflow replay and step-by-step debugging
+
+### 6. Code Complexity
+**Traditional**: More boilerplate for state management and error handling
+**Temporal**: Less boilerplate, focus on business logic
+
+## Demo Scenarios
+
+### Failure Scenarios to Implement
+1. **Ingredient Shortage**: Simulate ingredient unavailability
+2. **Equipment Failure**: Simulate toaster malfunction
+3. **Worker Unavailable**: Simulate worker absence
+4. **Quality Check Failure**: Simulate failed quality inspection
+5. **Network Interruption**: Simulate connectivity issues
+
+### Success Metrics
+- Time to implement each approach
+- Lines of code comparison
+- Debugging time for failures
+- Recovery time from failures
+- Monitoring capabilities
+
+## UI Components
+
+### Comparison Dashboard
+- Side-by-side workflow visualization
+- Real-time status updates
+- Performance metrics comparison
+- Failure scenario controls
+
+### Monitoring Views
+- Traditional Laravel queue monitoring
+- Temporal Web UI integration
+- Custom comparison metrics
+
+## Implementation Guidelines
+
+### Shared Components
+- Use the same models and services
+- Implement identical business logic
+- Use consistent validation rules
+- Share database schema
+
+### Testing Strategy
+- Create identical test scenarios
+- Measure implementation complexity
+- Document debugging experiences
+- Compare recovery mechanisms
+
+### Documentation
+- Document implementation differences
+- Highlight Temporal advantages
+- Provide code complexity metrics
+- Include troubleshooting guides

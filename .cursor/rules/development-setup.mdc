@@ -1,0 +1,60 @@
+---
+alwaysApply: false
+---
+
+# Development Setup
+
+## Environment Setup
+- Use Docker for consistent development environment
+- Implement proper environment variable management
+- Use Laravel Sail for local development
+- Configure proper logging and debugging tools
+
+## Testing Strategy
+- This is just a demo application for a presentation - don't bother writing tests
+
+## Development Tools
+- Use Laravel Pint for PHP code formatting
+- Use ESLint and Prettier for JavaScript/TypeScript
+- Configure proper IDE settings for the team
+- Use Git hooks for code quality checks
+
+## Local Development
+- Set up proper database migrations
+- Configure local environment variables
+- Use Laravel's built-in development server
+- Set up proper debugging tools (Xdebug, etc.)
+
+## Deployment Considerations
+- Use proper environment variable management
+- Configure proper logging for production
+- Set up monitoring and alerting
+- Implement proper backup strategies
+# Development Setup
+
+## Environment Setup
+- Use Docker for consistent development environment
+- Implement proper environment variable management
+- Use Laravel Sail for local development
+- Configure proper logging and debugging tools
+
+## Testing Strategy
+- This is just a demo application for a presentation - don't bother writing tests
+
+## Development Tools
+- Use Laravel Pint for PHP code formatting
+- Use ESLint and Prettier for JavaScript/TypeScript
+- Configure proper IDE settings for the team
+- Use Git hooks for code quality checks
+
+## Local Development
+- Set up proper database migrations
+- Configure local environment variables
+- Use Laravel's built-in development server
+- Set up proper debugging tools (Xdebug, etc.)
+
+## Deployment Considerations
+- Use proper environment variable management
+- Configure proper logging for production
+- Set up monitoring and alerting
+- Implement proper backup strategies

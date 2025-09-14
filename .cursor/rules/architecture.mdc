@@ -1,0 +1,138 @@
+---
+globs: app/**/*
+alwaysApply: false
+---
+# Architecture Guidelines
+
+## Laravel Backend Rules
+- Follow Laravel conventions for naming and structure
+- Use Eloquent models for data access
+- Implement services for complex business logic
+- Use Laravel's queue system for background processing
+- Leverage Laravel Reverb for real-time updates
+
+## Vue Frontend Rules
+- Use Composition API with `<script setup>` syntax
+- Implement TypeScript interfaces for all props and emits
+- Use shadcn-vue components for consistent UI
+- Follow Vue 3 best practices for reactivity and lifecycle
+
+## File Organization
+
+### Backend Structure
+```
+app/
+├── Data/             # Data objects
+├── Enums/            # Enums
+├── Models/           # Eloquent models
+├── Services/         # Business logic services
+├── Workflows/        # Temporal workflow definitions
+├── Activities/       # Temporal activity implementations
+├── Jobs/            # Traditional Laravel queued jobs
+├── Http/
+│   ├── Controllers/  # API controllers
+│   └── Middleware/   # Custom middleware
+├── Events/           # Laravel events
+├── Listeners/        # Event listeners
+└── Jobs/            # Queue jobs
+```
+
+### Frontend Structure
+```
+resources/js/
+├── components/       # Reusable Vue components
+├── pages/           # Inertia page components
+├── composables/     # Vue composables
+├── types/           # TypeScript type definitions
+├── lib/             # Utility functions
+└── stores/          # State management (if needed)
+```
+
+## Dual Implementation Strategy
+
+### Traditional Laravel Implementation
+- Create queued jobs for each workflow step
+- Use job chaining to maintain order
+- Implement manual state tracking in database
+- Handle failures with job retries and manual intervention
+- Use Laravel's queue monitoring tools
+
+### Temporal Implementation
+- Create workflows that orchestrate activities
+- Implement activities for each workflow step
+- Use Temporal's built-in state management
+- Leverage Temporal's retry and compensation features
+- Use Temporal Web UI for monitoring
+
+### Shared Components
+- Use the same models and services for both approaches
+- Implement consistent error handling patterns
+- Share validation logic between implementations
+- Use the same database schema for comparison
+# Architecture Guidelines
+
+## Laravel Backend Rules
+- Follow Laravel conventions for naming and structure
+- Use Eloquent models for data access
+- Implement services for complex business logic
+- Use Laravel's queue system for background processing
+- Leverage Laravel Reverb for real-time updates
+
+## Vue Frontend Rules
+- Use Composition API with `<script setup>` syntax
+- Implement TypeScript interfaces for all props and emits
+- Use shadcn-vue components for consistent UI
+- Follow Vue 3 best practices for reactivity and lifecycle
+
+## File Organization
+
+### Backend Structure
+```
+app/
+├── Data/             # Data objects
+├── Enums/            # Enums
+├── Models/           # Eloquent models
+├── Services/         # Business logic services
+├── Workflows/        # Temporal workflow definitions
+├── Activities/       # Temporal activity implementations
+├── Jobs/            # Traditional Laravel queued jobs
+├── Http/
+│   ├── Controllers/  # API controllers
+│   └── Middleware/   # Custom middleware
+├── Events/           # Laravel events
+├── Listeners/        # Event listeners
+└── Jobs/            # Queue jobs
+```
+
+### Frontend Structure
+```
+resources/js/
+├── components/       # Reusable Vue components
+├── pages/           # Inertia page components
+├── composables/     # Vue composables
+├── types/           # TypeScript type definitions
+├── lib/             # Utility functions
+└── stores/          # State management (if needed)
+```
+
+## Dual Implementation Strategy
+
+### Traditional Laravel Implementation
+- Create queued jobs for each workflow step
+- Use job chaining to maintain order
+- Implement manual state tracking in database
+- Handle failures with job retries and manual intervention
+- Use Laravel's queue monitoring tools
+
+### Temporal Implementation
+- Create workflows that orchestrate activities
+- Implement activities for each workflow step
+- Use Temporal's built-in state management
+- Leverage Temporal's retry and compensation features
+- Use Temporal Web UI for monitoring
+
+### Shared Components
+- Use the same models and services for both approaches
+- Implement consistent error handling patterns
+- Share validation logic between implementations
+- Use the same database schema for comparison

@@ -1,0 +1,118 @@
+---
+globs: resources/**/*
+alwaysApply: false
+---
+# UI/UX Guidelines
+
+## Design System
+- Use shadcn-vue components consistently
+- Follow Tailwind CSS utility-first approach
+- Implement responsive design for all screen sizes
+- Use consistent color scheme and typography
+
+## User Experience
+- Provide clear visual feedback for all actions
+- Show loading states during async operations
+- Implement proper error messages and recovery
+- Use animations to enhance user understanding
+
+## Component Guidelines
+- Create reusable components with proper props
+- Implement proper accessibility features
+- Use consistent spacing and layout patterns
+- Follow mobile-first responsive design
+
+## Visual Design
+- Use a consistent color palette throughout the app
+- Implement proper contrast ratios for accessibility
+- Use appropriate typography hierarchy
+- Include proper hover and focus states
+
+## Comparison Interface Design
+
+### Side-by-Side Layout
+- Create split-screen or tabbed interface for comparison
+- Use consistent styling for both implementations
+- Highlight key differences with visual indicators
+- Provide easy switching between approaches
+
+### Status Visualization
+- Use color-coded status indicators for both approaches
+- Show progress bars for workflow/job completion
+- Display failure states with appropriate visual cues
+- Use icons to represent different workflow steps
+
+### Metrics Display
+- Create comparison charts and graphs
+- Show processing time differences
+- Display failure rate comparisons
+- Highlight complexity metrics
+
+### Interactive Elements
+- Add buttons to trigger failure scenarios
+- Provide controls to pause/resume processing
+- Include debugging tools for both approaches
+- Add export functionality for comparison data
+
+### Educational Features
+- Include tooltips explaining Temporal advantages
+- Add guided tours highlighting key differences
+- Provide code snippets showing implementation complexity
+- Include links to relevant documentation
+# UI/UX Guidelines
+
+## Design System
+- Use shadcn-vue components consistently
+- Follow Tailwind CSS utility-first approach
+- Implement responsive design for all screen sizes
+- Use consistent color scheme and typography
+
+## User Experience
+- Provide clear visual feedback for all actions
+- Show loading states during async operations
+- Implement proper error messages and recovery
+- Use animations to enhance user understanding
+
+## Component Guidelines
+- Create reusable components with proper props
+- Implement proper accessibility features
+- Use consistent spacing and layout patterns
+- Follow mobile-first responsive design
+
+## Visual Design
+- Use a consistent color palette throughout the app
+- Implement proper contrast ratios for accessibility
+- Use appropriate typography hierarchy
+- Include proper hover and focus states
+
+## Comparison Interface Design
+
+### Side-by-Side Layout
+- Create split-screen or tabbed interface for comparison
+- Use consistent styling for both implementations
+- Highlight key differences with visual indicators
+- Provide easy switching between approaches
+
+### Status Visualization
+- Use color-coded status indicators for both approaches
+- Show progress bars for workflow/job completion
+- Display failure states with appropriate visual cues
+- Use icons to represent different workflow steps
+
+### Metrics Display
+- Create comparison charts and graphs
+- Show processing time differences
+- Display failure rate comparisons
+- Highlight complexity metrics
+
+### Interactive Elements
+- Add buttons to trigger failure scenarios
+- Provide controls to pause/resume processing
+- Include debugging tools for both approaches
+- Add export functionality for comparison data
+
+### Educational Features
+- Include tooltips explaining Temporal advantages
+- Add guided tours highlighting key differences
+- Provide code snippets showing implementation complexity
+- Include links to relevant documentation

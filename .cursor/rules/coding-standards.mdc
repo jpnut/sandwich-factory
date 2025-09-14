@@ -1,0 +1,102 @@
+---
+alwaysApply: true
+---
+
+# Coding Standards
+
+## PHP/Laravel
+- Use strict typing with `declare(strict_types=1)`
+- Follow PSR-12 coding standards
+- Use Laravel Pint for code formatting
+- Implement proper error handling and logging
+- Use dependency injection for services
+
+## TypeScript/Vue
+- Enable strict TypeScript mode
+- Use proper type annotations for all functions
+- Implement proper error boundaries
+- Use ESLint and Prettier for code quality
+- Follow Vue 3 composition API patterns
+
+## General Guidelines
+- Write clean, readable, and maintainable code
+- Use meaningful variable and function names
+- Add appropriate comments for complex logic
+- Follow the established patterns in the codebase
+
+## Dual Implementation Standards
+
+### Shared Business Logic
+- Extract common business logic into service classes
+- Use the same validation rules for both approaches
+- Implement consistent error handling patterns
+- Share data models and DTOs between implementations
+
+### Traditional Laravel Jobs
+- Use descriptive job class names with "Job" suffix
+- Implement proper job chaining for workflow steps
+- Use database transactions for state management
+- Implement manual retry logic with exponential backoff
+- Add comprehensive logging for debugging
+
+### Temporal Implementation
+- Use descriptive workflow and activity names
+- Implement proper activity interfaces and contracts
+- Use Temporal's built-in retry mechanisms
+- Leverage Temporal's state management features
+- Add workflow and activity logging
+
+### Code Organization
+- Keep traditional and Temporal implementations in separate directories
+- Use consistent naming conventions across both approaches
+- Implement similar interfaces for comparable functionality
+- Create shared test data and fixtures
+# Coding Standards
+
+## PHP/Laravel
+- Use strict typing with `declare(strict_types=1)`
+- Follow PSR-12 coding standards
+- Use Laravel Pint for code formatting
+- Implement proper error handling and logging
+- Use dependency injection for services
+
+## TypeScript/Vue
+- Enable strict TypeScript mode
+- Use proper type annotations for all functions
+- Implement proper error boundaries
+- Use ESLint and Prettier for code quality
+- Follow Vue 3 composition API patterns
+
+## General Guidelines
+- Write clean, readable, and maintainable code
+- Use meaningful variable and function names
+- Add appropriate comments for complex logic
+- Follow the established patterns in the codebase
+
+## Dual Implementation Standards
+
+### Shared Business Logic
+- Extract common business logic into service classes
+- Use the same validation rules for both approaches
+- Implement consistent error handling patterns
+- Share data models and DTOs between implementations
+
+### Traditional Laravel Jobs
+- Use descriptive job class names with "Job" suffix
+- Implement proper job chaining for workflow steps
+- Use database transactions for state management
+- Implement manual retry logic with exponential backoff
+- Add comprehensive logging for debugging
+
+### Temporal Implementation
+- Use descriptive workflow and activity names
+- Implement proper activity interfaces and contracts
+- Use Temporal's built-in retry mechanisms
+- Leverage Temporal's state management features
+- Add workflow and activity logging
+
+### Code Organization
+- Keep traditional and Temporal implementations in separate directories
+- Use consistent naming conventions across both approaches
+- Implement similar interfaces for comparable functionality
+- Create shared test data and fixtures

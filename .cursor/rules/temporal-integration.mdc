@@ -1,0 +1,110 @@
+---
+alwaysApply: false
+---
+
+# Temporal.io Integration
+
+## Workflow Design
+- Create durable workflows for each order
+- Implement retry logic with exponential backoff
+- Use signals for external communication
+- Implement proper error handling and compensation
+
+## Activity Implementation
+- Make activities idempotent
+- Use proper timeout configurations
+- Implement heartbeats for long-running activities
+- Handle external service failures gracefully
+
+## Best Practices
+- Use descriptive workflow and activity names
+- Implement proper logging for debugging
+- Use Temporal's built-in retry mechanisms
+- Handle workflow timeouts appropriately
+- Implement proper cleanup for failed workflows
+
+## Error Handling
+- Catch and handle specific exceptions
+- Implement compensation logic for failed steps
+- Use Temporal's error types appropriately
+- Provide meaningful error messages
+
+## Comparison Implementation
+
+### Traditional Laravel Jobs
+Create equivalent Laravel queued jobs that demonstrate the limitations:
+- **OrderProcessingJob**: Chain multiple jobs for workflow steps
+- **IngredientPreparationJob**: Handle ingredient gathering
+- **BreadToastingJob**: Manage bread toasting process
+- **SandwichAssemblyJob**: Coordinate assembly process
+- **PackagingJob**: Handle packaging operations
+- **QualityCheckJob**: Perform quality verification
+- **DeliveryJob**: Complete order delivery
+
+### Temporal Advantages to Highlight
+- **State Management**: Temporal maintains workflow state automatically vs manual database tracking
+- **Failure Recovery**: Built-in retry and compensation vs manual job retry logic
+- **Observability**: Temporal Web UI vs Laravel queue monitoring
+- **Long-running Processes**: Temporal handles long workflows vs job timeouts
+- **Error Handling**: Automatic compensation vs manual rollback logic
+- **Debugging**: Temporal's replay feature vs manual debugging
+
+### Implementation Guidelines
+- Use the same business logic in both approaches
+- Implement similar failure scenarios for comparison
+- Create side-by-side monitoring dashboards
+- Document the differences in implementation complexity
+- Show how Temporal reduces boilerplate code
+# Temporal.io Integration
+
+## Workflow Design
+- Create durable workflows for each order
+- Implement retry logic with exponential backoff
+- Use signals for external communication
+- Implement proper error handling and compensation
+
+## Activity Implementation
+- Make activities idempotent
+- Use proper timeout configurations
+- Implement heartbeats for long-running activities
+- Handle external service failures gracefully
+
+## Best Practices
+- Use descriptive workflow and activity names
+- Implement proper logging for debugging
+- Use Temporal's built-in retry mechanisms
+- Handle workflow timeouts appropriately
+- Implement proper cleanup for failed workflows
+
+## Error Handling
+- Catch and handle specific exceptions
+- Implement compensation logic for failed steps
+- Use Temporal's error types appropriately
+- Provide meaningful error messages
+
+## Comparison Implementation
+
+### Traditional Laravel Jobs
+Create equivalent Laravel queued jobs that demonstrate the limitations:
+- **OrderProcessingJob**: Chain multiple jobs for workflow steps
+- **IngredientPreparationJob**: Handle ingredient gathering
+- **BreadToastingJob**: Manage bread toasting process
+- **SandwichAssemblyJob**: Coordinate assembly process
+- **PackagingJob**: Handle packaging operations
+- **QualityCheckJob**: Perform quality verification
+- **DeliveryJob**: Complete order delivery
+
+### Temporal Advantages to Highlight
+- **State Management**: Temporal maintains workflow state automatically vs manual database tracking
+- **Failure Recovery**: Built-in retry and compensation vs manual job retry logic
+- **Observability**: Temporal Web UI vs Laravel queue monitoring
+- **Long-running Processes**: Temporal handles long workflows vs job timeouts
+- **Error Handling**: Automatic compensation vs manual rollback logic
+- **Debugging**: Temporal's replay feature vs manual debugging
+
+### Implementation Guidelines
+- Use the same business logic in both approaches
+- Implement similar failure scenarios for comparison
+- Create side-by-side monitoring dashboards
+- Document the differences in implementation complexity
+- Show how Temporal reduces boilerplate code

@@ -1,0 +1,114 @@
+---
+alwaysApply: false
+---
+
+# Sandwich Factory Domain Model
+
+## Core Entities
+- **Order**: Represents a customer sandwich order
+- **Sandwich**: The product being manufactured
+- **Ingredient**: Raw materials used in sandwich making
+- **Workstation**: Physical locations where work is performed
+- **Worker**: Human or machine performing tasks
+
+## Workflow Steps
+1. **Order Reception**: Customer places order
+2. **Ingredient Preparation**: Gather and prepare ingredients
+3. **Bread Toasting**: Toast bread if required
+4. **Assembly**: Put sandwich together
+5. **Packaging**: Wrap and package sandwich
+6. **Quality Check**: Verify sandwich meets standards
+7. **Delivery**: Hand off to customer
+
+## Failure Scenarios to Demonstrate
+- Ingredient shortage
+- Equipment malfunction
+- Worker unavailability
+- Quality check failures
+- Network interruptions
+
+## Business Rules
+- Each order must go through all workflow steps
+- Workstations can only handle one task at a time
+- Ingredients must be available before assembly
+- Quality checks are mandatory before delivery
+- Orders should be processed in FIFO order
+
+## Implementation Approaches
+
+### Traditional Laravel Approach
+- Use Laravel Queued Jobs for each workflow step
+- Implement job chaining for sequential processing
+- Use database transactions for state management
+- Handle failures with job retries and manual intervention
+- Store order state in database with status tracking
+
+### Temporal Approach
+- Use Temporal Workflows for durable, stateful processing
+- Implement activities for each workflow step
+- Use Temporal's built-in retry and compensation mechanisms
+- Leverage Temporal's visibility and monitoring features
+- Maintain workflow state automatically with Temporal
+
+## Comparison Goals
+Demonstrate how Temporal provides:
+- Better failure recovery and compensation
+- Improved observability and debugging
+- Automatic state management
+- Built-in retry mechanisms
+- Better handling of long-running processes
+# Sandwich Factory Domain Model
+
+## Core Entities
+- **Order**: Represents a customer sandwich order
+- **Sandwich**: The product being manufactured
+- **Ingredient**: Raw materials used in sandwich making
+- **Workstation**: Physical locations where work is performed
+- **Worker**: Human or machine performing tasks
+
+## Workflow Steps
+1. **Order Reception**: Customer places order
+2. **Ingredient Preparation**: Gather and prepare ingredients
+3. **Bread Toasting**: Toast bread if required
+4. **Assembly**: Put sandwich together
+5. **Packaging**: Wrap and package sandwich
+6. **Quality Check**: Verify sandwich meets standards
+7. **Delivery**: Hand off to customer
+
+## Failure Scenarios to Demonstrate
+- Ingredient shortage
+- Equipment malfunction
+- Worker unavailability
+- Quality check failures
+- Network interruptions
+
+## Business Rules
+- Each order must go through all workflow steps
+- Workstations can only handle one task at a time
+- Ingredients must be available before assembly
+- Quality checks are mandatory before delivery
+- Orders should be processed in FIFO order
+
+## Implementation Approaches
+
+### Traditional Laravel Approach
+- Use Laravel Queued Jobs for each workflow step
+- Implement job chaining for sequential processing
+- Use database transactions for state management
+- Handle failures with job retries and manual intervention
+- Store order state in database with status tracking
+
+### Temporal Approach
+- Use Temporal Workflows for durable, stateful processing
+- Implement activities for each workflow step
+- Use Temporal's built-in retry and compensation mechanisms
+- Leverage Temporal's visibility and monitoring features
+- Maintain workflow state automatically with Temporal
+
+## Comparison Goals
+Demonstrate how Temporal provides:
+- Better failure recovery and compensation
+- Improved observability and debugging
+- Automatic state management
+- Built-in retry mechanisms
+- Better handling of long-running processes
